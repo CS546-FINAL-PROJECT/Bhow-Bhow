@@ -6,5 +6,3 @@ This website will be a dog adoption website, which will highlight local dogs tha
 * Mohammed Qazi,
 * Pratim Patel,
 * Yuting Shao
-
-Test
