@@ -1,4 +1,4 @@
 # NJ PET ADOPTION
-
+Welcome to CS-546's Flagship Final Proejct for the semester,
 # Team Member
-Mohanned Qazi, Zhixin Jiang, Pratim Patel, Yuting Shao
+Zhixin Jiang,Mohammed Qazi, Pratim Patel, Yuting Shao
