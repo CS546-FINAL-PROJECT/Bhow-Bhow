@@ -8,9 +8,9 @@ const path = require('path');
 const constructorMethod = (app) => {
 	app.use('/advertisers', advertisersRoutes);
 	app.use('/comments', commentsRoutes);
-  app.use('/dogs', dogsRoutes);
+        app.use('/dogs', dogsRoutes);
 	app.use('/login', loginRoutes);
-  app.use('/users', userRoutes);
+        app.use('/users', userRoutes);
   
 	app.get('/about', (req, res) => {
 		res.sendFile(path.resolve('static/about.html'));
