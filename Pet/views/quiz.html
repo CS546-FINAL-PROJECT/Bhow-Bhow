@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Adoption Application Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+    <div class="container">
+    <!-- <img id="cover" src="https://dogsbestlife.com/wp-content/uploads/2018/05/science-says-sleep-with-your-dog-emotional-support.jpeg" alt="Dog Image"> -->
+    <!-- <img id="cover" src="https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-header-dog-breeds.jpg" alt="Dog Image"> -->
+    <img id="cover" src="https://australiapetdoors.com.au/wp-content/uploads/2016/04/Dogs-for-Kids.jpg" alt="Dog Image">
+    <div>
+        <svg class="bi bi-house-door" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5H9.5a.5.5 0 01-.5-.5v-4H7v4a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 01.5-.5h3a.5.5 0 01.5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd"/>
+          </svg>
+          <i class="fas fa-camera fa-xs"></i>
+        <h2 class="header">Every dog deserves more than a loving home – they deserve the right loving home. Find the best match for your family.</h2>
+    </div>
+    <form action="" method="POST">
+    <div id="quiz">
+
+        <div class="questions_groups">
+            <h2 class="question">1. What type of home/living space do you have?</h2>    
+            <input type="radio" class = "radio_keys" name = "space" value="1" >It's bigger than a closet, so I call it an apartment<br>
+            <input type="radio" class = "radio_keys" name = "space" value="2" >"Cozy" House<br>
+            <input type="radio" class = "radio_keys" name = "space" value="3" >Large House<br>
+            
+            <h2 class="question">2. Are you able to keep a dog secure?</h2>
+            <input type="radio" class = "radio_keys" name = "secure" >YES<br>
+            <input type="radio" class = "radio_keys" name = "secure"  >NO<br>
+            <input type="radio" class = "radio_keys" name = "secure" >USUALLY<br>
+        
+            <h2 class="question">3. Where is your home?</h2>
+            <input type="radio" class = "radio_keys" name = "place" >Downtown<br>
+            <input type="radio" class = "radio_keys" name = "place"  >Suburb or small town<br>
+            <input type="radio" class = "radio_keys" name = "place" >Rural retreat (listen, you can hear the grass growing)<br>
+
+            <h2 class="question">4. For how long would your dog be alone each week?</h2>
+            <input type="radio" class = "radio_keys" name = "accompany_time" >Not at all<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time"  >10–20 hours<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time" >20–40 hours<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time" >More than 40 hours<br>
+
+            <h2 class="question">5. Do elderly or disabled people stay with you?</h2>
+            <input type="radio" class = "radio_keys" name = "secure" >No<br>
+            <input type="radio" class = "radio_keys" name = "secure"  >Sometimes<br>
+            <input type="radio" class = "radio_keys" name = "secure" >Often<br>
+            <input type="radio" class = "radio_keys" name = "secure" >Permanently<br>
+
+            <h2 class="question">2. Are you able to keep a dog secure?</h2>
+            <input type="radio" class = "radio_keys" name = "secure" >YES<br>
+            <input type="radio" class = "radio_keys" name = "secure"  >NO<br>
+            <input type="radio" class = "radio_keys" name = "secure" >USUALLY<br>
+        </div>
+        
+    <div id="submit_button">
+        <button type="submit" class="btn btn-primary">Submit Quiz</button>
+    </div>
+    </form>
+
+    <!-- <div id="results"></div> -->
+    </div>
+
+    
+    
+</body>
+</html>
