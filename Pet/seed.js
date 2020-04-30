@@ -3,17 +3,17 @@ var Dog = require("./models/dog");
 var Comment = require("./models/comment");
 
 var data = [{
-	dog_breed:"String",
-	dog_name:"String",
-	dog_age:"String",
-	dog_address:"String",
-	dog_description:"String",
-	dog_vaccine:[],
+	dog_breed:"combai",
+	dog_name:"Yankee",
+	dog_age:"Twelve",
+	dog_address:"183 Hutton St",
+	dog_description:"A very cute and faithful dog",
+	dog_vaccine:[A,c,v],
 	dog_picture:"String",
-	dog_postdate:"String",
-	dog_color:"String",
-	dog_size:"String",
-	dog_gender:"String"
+	dog_postdate:"21-April-2020",
+	dog_color:"Blue",
+	dog_size:"12 ft",
+	dog_gender:"Male"
 }];
 
 function seedDB(){
