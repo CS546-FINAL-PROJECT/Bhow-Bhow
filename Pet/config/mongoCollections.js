@@ -14,6 +14,8 @@ const getCollectionFn = collection => {
 };
 
 module.exports = {
-  bands: getCollectionFn("bands"),
-  albums: getCollectionFn("albums")
+    advertiser: getCollectionFn("advertiser"),
+    comments: getCollectionFn("comments"),
+    dog: getCollectionFn("dog"),
+    user: getCollectionFn("user")
 };
