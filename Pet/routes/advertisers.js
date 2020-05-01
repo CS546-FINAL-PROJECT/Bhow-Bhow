@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var Dog = require("../models/advertiser.js");
+var Advertisor = require("../models/advertiser.js");
 var request = require("request");
 
 // Show the home page with all advertiser infomation
@@ -9,7 +9,7 @@ router.get("/",function(req,res){
 		if(err)
 			console.log(err);
 		else
-			res.render("index",{dogs:allAdvertiser});
+			res.render("index",{advertisers:allAdvertiser});
 	})
 })
 
@@ -32,7 +32,7 @@ router.post("/",function(req,res){
 		 advertiser_address:advertiser_address,
 		 advertiser_dogList:advertiser_dogList,
 	};
-	Advertiser.create(newAdvertiser,function(err,newlycreated){
+	Advertisor.create(newAdvertiser,function(err,newlycreated){
 		if(err)
 			console.log(err);
 		else
@@ -48,13 +48,12 @@ router.get("/new",function(req,res){
 });
 
 
-// Show the specific dog page
 router.get("/:id",function(req,res){
-	Dog.findById(req.params.id).populate("comments").exec(function(err,foundDog){
+	Advertisor.findById(req.params.id).exec(function(err,foundAdvertiser){
 		if(err)
 			console.log(err);
 		else{
-			res.render("dogs/dog_page",{dog:foundDog});
+			res.render("advertiser/advertiser_page",{advertiser:foundAdvertiser});
 		}
 	});
 });
@@ -71,7 +70,7 @@ Advertiser.findByIdAndRemove(req.params.id,function(err){
 
 // Update the advertisers page
 router.put("/:id",function(req,res){
-	Advertiser.findByIdAndUpdate(req.params.id,function(err){
+	Advertisor.findByIdAndUpdate(req.params.id,function(err){
 		if(err)
 			res.redirect("/advertisers");
 		else
