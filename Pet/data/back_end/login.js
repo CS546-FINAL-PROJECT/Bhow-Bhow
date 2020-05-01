@@ -1,4 +1,44 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+
+async function findUser(username){
+    for(let i=0; i<users.length; i++)
+    {
+        if(users[i].username===username)
+            return users[i]
+    }
+    
+    throw false;
+}
+
+async function findUserBySID(sid){
+    for(let i=0; i<users.length; i++)
+    {
+        if(users[i].sessionID===sid)
+            return users[i]
+    }
+    
+    throw false;
+}
+
+async function checkPW(user,password){
+    try{
+        var theUser=await findUser(user);
+    }
+    catch(e){
+        throw false;
+    }
+
+
+    if(await bcrypt.compare(password, theUser.hashedPassword)){
+        return true;
+    }
+    else{
+        throw false;
+    }
+
+}
+
 var UserSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -33,8 +73,14 @@ if (req.body.email &&
     if (err) {
       return next(err)
     } else {
-      return res.redirect('/profile');
+      return res.redirect('/index');
     }
   });
 }
-module.exports = User;
+module.exports=
+{
+    findUser,
+    checkPW,
+    findUserBySID,
+    User
+};
