@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const owasp = require('owasp-password-strength-test');
+
+owasp.config({
+    allowPassphrases: true,
+    maxLength: 128,
+    minLength: 7,
+    minPhraseLength: 20,
+    minOptionalTestsToPass: 2,
+});
 
 async function findUser(username){
     for(let i=0; i<users.length; i++)
@@ -28,15 +37,20 @@ async function checkPW(user,password){
     catch(e){
         throw false;
     }
+    if (owasp.test(password)["strong"]) {
 
-
-    if(await bcrypt.compare(password, theUser.hashedPassword)){
+    if(await bcrypt.compare(password, theUser.hashedPassword))
+    {
         return true;
     }
     else{
         throw false;
     }
-
+}
+    else
+    {
+        return "Password is too weak!";
+    }    
 }
 
 var UserSchema = new mongoose.Schema({
