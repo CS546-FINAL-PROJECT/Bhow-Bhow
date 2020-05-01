@@ -12,7 +12,7 @@ async function addUser(user_id, user_name, user_password, user_email, user_gende
    
     const userCollection = await back_users();
      
-    if (user_name_exists(user_name))
+    if (await user_name_exists(user_name))
      {
         return "Username Not Availabe";
      }
