@@ -1,12 +1,25 @@
-async function addUser(user_id, user_name, user_password, user_email, user_gender, user_city, user_state, user_age, favoriteList){
-    if (!user_name) throw 'You must provide a username';
 
+async function addUser(user_id, user_name, user_password, user_email, user_gender, user_city, user_state, user_age, favoriteList){
+   if (!user_name) throw 'You must provide a username';
+   if (!user_password) throw 'You must provide a password';
+   if (!user_email) throw 'You must provide a email';
+   if (!user_gender) throw 'You must provide a gender';
+   if (!user_city) throw 'You must provide a city';
+   if (!user_state) throw 'You must provide a state';
+   if (!user_age) throw 'You must provide a age';
+   if (!favoriteList || !Array.isArray(favoriteList)) throw 'You must provide an array of favorite List';
+   if (favoriteList.length === 0) throw 'You must provide at least one favorite List.';
    
     const userCollection = await back_users();
+     
+    if (user_name_exists(user_name))
+     {
+        return "Username Not Availabe";
+     }
 
     let newUser = {
       user_id: user_id,
-      user_name: user_name,
+      user_name: user_name.toLowerCase(),
       user_password: user_password,
       user_email: user_email,
       user_gender: user_gender,
@@ -25,6 +38,12 @@ async function addUser(user_id, user_name, user_password, user_email, user_gende
     return user;
   }
 
+async function user_name_exists(user_name)
+{
+    user_name = user_name.toLowerCase();
+    const existsCollection = await back_users();
+    return await existsCollection.findOne({user_name: user_name}) !== null;
+}
 
 
 async function getAllUsers(){
@@ -55,7 +74,7 @@ async function updateUser(user_id, user_name, user_password, user_email, user_ge
     const userCollection = await back_users();
     const updatedUser = {
         user_id: user_id,
-        user_name: user_name,
+        user_name: user_name.LowerCase(),
         user_password: user_password,
         user_email: user_email,
         user_gender: user_gender,
