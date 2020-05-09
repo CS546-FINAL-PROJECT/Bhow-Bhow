@@ -1,0 +1,37 @@
+<div class='align-form-div' style='text-align:center'>
+<form action="/" method="POST">
+  <div class="form-inline">
+		<select class="form-control " name="search" id="search_cat">
+
+		<option value="all" id="all">
+		All
+		</option>
+		<option value="breed" id="breed">
+		Breed
+		</option >
+		<option value="age" id="age">
+		Age
+		</option>
+		<option value="location" id="location">
+		Location
+		</option>
+		</select>
+		<input type="text" id="search" name="lname">
+      <button class="btn btn-default" type="submit">Submit
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+  </div>
+</form>
+
+<div class="row">
+{{#each dogInfo }}
+<div id='result' class="card" style="width: 18rem;">
+  <img alt="Card image cap" class="card-img-top img-fluid" src="{{dog_picture}}" style="width: 18rem; height: 20rem;>
+  <div class="card-body">
+    <h5 class="card-title">Name: {{dog_name}}</h5>
+    <p class="card-text">Age: {{dog_age}}</p>
+    <p class="card-text">Breed: {{dog_breed}}</p>
+  <a href=“/{{this._id}}” class=“btn btn-primary”>View detail</a>
+  </div>	
+{{/each}}
+</div>
