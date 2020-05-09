@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Dog Adoption Application Quiz</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -19,7 +20,7 @@
           <i class="fas fa-camera fa-xs"></i>
         <h2 class="header">Every dog deserves more than a loving home – they deserve the right loving home. Find the best match for your family.</h2>
     </div>
-    <form action="" method="POST">
+    <form action="" method="POST" onsubmit="return mySubmit(this)">
     <div id="quiz">
 
         <div class="questions_groups">
@@ -29,40 +30,105 @@
             <input type="radio" class = "radio_keys" name = "space" value="3" >Large House<br>
             
             <h2 class="question">2. Are you able to keep a dog secure?</h2>
-            <input type="radio" class = "radio_keys" name = "secure" >YES<br>
-            <input type="radio" class = "radio_keys" name = "secure"  >NO<br>
-            <input type="radio" class = "radio_keys" name = "secure" >USUALLY<br>
+            <input type="radio" class = "radio_keys" name = "secure" value="3">YES<br>
+            <input type="radio" class = "radio_keys" name = "secure"  value="2">NO<br>
+            <input type="radio" class = "radio_keys" name = "secure" value="1">USUALLY<br>
         
             <h2 class="question">3. Where is your home?</h2>
-            <input type="radio" class = "radio_keys" name = "place" >Downtown<br>
-            <input type="radio" class = "radio_keys" name = "place"  >Suburb or small town<br>
-            <input type="radio" class = "radio_keys" name = "place" >Rural retreat (listen, you can hear the grass growing)<br>
+            <input type="radio" class = "radio_keys" name = "place" value="1">Downtown<br>
+            <input type="radio" class = "radio_keys" name = "place"  value="2">Suburb or small town<br>
+            <input type="radio" class = "radio_keys" name = "place" value="3">Rural retreat (listen, you can hear the grass growing)<br>
 
             <h2 class="question">4. For how long would your dog be alone each week?</h2>
-            <input type="radio" class = "radio_keys" name = "accompany_time" >Not at all<br>
-            <input type="radio" class = "radio_keys" name = "accompany_time"  >10–20 hours<br>
-            <input type="radio" class = "radio_keys" name = "accompany_time" >20–40 hours<br>
-            <input type="radio" class = "radio_keys" name = "accompany_time" >More than 40 hours<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time" value="1">Not at all<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time"  value="2">10–20 hours<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time" value="3">20–40 hours<br>
+            <input type="radio" class = "radio_keys" name = "accompany_time" value="4">More than 40 hours<br>
 
             <h2 class="question">5. Do elderly or disabled people stay with you?</h2>
-            <input type="radio" class = "radio_keys" name = "secure" >No<br>
-            <input type="radio" class = "radio_keys" name = "secure"  >Sometimes<br>
-            <input type="radio" class = "radio_keys" name = "secure" >Often<br>
-            <input type="radio" class = "radio_keys" name = "secure" >Permanently<br>
+            <input type="radio" class = "radio_keys" name = "elder" value="1">No<br>
+            <input type="radio" class = "radio_keys" name = "elder"  value="2">Sometimes<br>
+            <input type="radio" class = "radio_keys" name = "elder" value="3">Often<br>
+            <input type="radio" class = "radio_keys" name = "elder" value="4" >Permanently<br>
 
-            <h2 class="question">2. Are you able to keep a dog secure?</h2>
-            <input type="radio" class = "radio_keys" name = "secure" >YES<br>
-            <input type="radio" class = "radio_keys" name = "secure"  >NO<br>
-            <input type="radio" class = "radio_keys" name = "secure" >USUALLY<br>
+            <h2 class="question">6. What is the age of the youngest child living in or regularly visiting your home?</h2>
+            <input type="radio" class = "radio_keys" name = "child" value="1">No children<br>
+            <input type="radio" class = "radio_keys" name = "child"  value="2">Under 5 years<br>
+            <input type="radio" class = "radio_keys" name = "child" value="3">Ages 6 to 11<br>
+            <input type="radio" class = "radio_keys" name = "child" value="4">Over 12<br>
+            <h2 class="question">7. How energetic should your dog be?</h2>
+            <input type="radio" class = "radio_keys" name = "energy" value="1">"You don't really expect me to fetch that ball, do you?"<br>
+            <input type="radio" class = "radio_keys" name = "energy"  value="2">"Let's play catch—but don't make me run around too much"<br>
+            <input type="radio" class = "radio_keys" name = "energy" value="3">"This is fun, throw the ball again!"<br>
+            <input type="radio" class = "radio_keys" name = "energy" value="4">"Why are you stopping? We've only been playing for 3 hours!"<br>
+            <h2 class="question">8. How much daily exercise will you give your dog?</h2>
+            <input type="radio" class = "radio_keys" name = "exercise" value="1">None, I'm basically a couch potato<br>
+            <input type="radio" class = "radio_keys" name = "exercise"  value="2">30 minutes<br>
+            <input type="radio" class = "radio_keys" name = "exercise" value="3">1 hour<br>
+            <input type="radio" class = "radio_keys" name = "exercise" value="4">More than 1 hour<br> 
         </div>
         
     <div id="submit_button">
         <button type="submit" class="btn btn-primary">Submit Quiz</button>
     </div>
+
     </form>
 
-    <!-- <div id="results"></div> -->
+   
     </div>
+          <script>
+                function mySubmit(form){
+
+                    document.getElementById("result").style.display="block";
+                    let formData = new FormData(form);
+
+                    let hoppy1 = [formData.get('space'),formData.get('secure'),formData.get('place'),formData.get('accompany_time'),
+                                formData.get('elder'),formData.get('child'),formData.get('energy'),formData.get('exercise')];
+
+                    var sum = 0;
+                    for(var i in hoppy1){
+                        sum += parseInt(hoppy1[i]);
+                        console.log(sum);
+                    }
+
+                    var dogImage = document.getElementById("dogImage");
+                    var dogName = document.getElementById("dogName");
+                    var dogDesc = document.getElementById("dogDesc");
+                    console.log(sum);
+                    if(sum <= 15 && sum >= 8){
+                        dogImage.src = "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12223645/Sussex-Spaniel-On-White-01.jpg";
+                        dogName.innerHTML = "Sussex Spaniel";
+                        dogDesc.innerHTML = "Sussex are long, low-built bird dogs of great strength and endurance. Topping out at just 15 inches tall at the shoulder, Sussex are nonetheless described as “massive,” with a deep chest and heavy bone. Their trademark is an abundant, feathery coat of rich golden-liver. The classic spaniel head, with its wavy-coated ears and big hazel eyes, projects a somber, frowning expression delightfully at odds with the Sussex’s innate cheerfulness.";
+                    }else if(sum > 15 && sum <= 20){
+                        dogImage.src = "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/30202205/Airedale-Terrier-standing-stacked-outdoors.jpg";
+                        dogName.innerHTML = "Airedale Terrier";
+                        dogDesc.innerHTML = "The Airedale Terrier is the largest of all terrier breeds. Males stand about 23 inches at the shoulder, females a little less. The dense, wiry coat is tan with black markings. Long, muscular legs give Airedales a regal lift in their bearing, and the long head—with its sporty beard and mustache, dark eyes, and neatly folded ears—conveys a keen intelligence. Airedales are the very picture of an alert and willing terrier—only bigger. And, like his smaller cousins in the terrier family, he can be bold, determined, and stubborn. Airedales are docile and patient with kids but won’t back down when protecting hearth and home. Thanks to their famous do-it-all attitude, Airedales excel in all kinds of sports and family activities.";
+                    }else if(sum >20 && sum <= 25){
+                        dogImage.src = "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001724/American-Eskimo-Dog-On-White-01.jpg";
+                        dogName.innerHTML = "American Eskimo Dog";
+                        dogDesc.innerHTML = "The American Eskimo Dog comes in three sizes—standard, miniature, and toy—standing as tall as 19 inches at the shoulder or as short as 9 inches. Distinctive traits include a dense, sparkling white coat with a lion-like ruff around the chest and shoulders; a smiling face, with black nose, lips, and eye-rims that convey a keen, intelligent expression; and a plumed tail carried over the back. Some Eskies have markings with the delicious color name “biscuit cream.” They move with a bold and agile gait.<br />Eskies are social animals and can develop problem behaviors when neglected or undertrained—they insist on being part of family life. Among the most trainable of breeds, the clever, kid-friendly Eskie practically invented the phrase “eager to please.";
+                    }else{
+                        dogImage.src = "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001815/Alaskan-Malamute-On-White-03.jpg";
+                        dogName.innerHTML = "Alaskan Malamute";
+                        dogDesc.innerHTML = "The Alaskan Malamute stands 23 to 25 inches at the shoulder and weighs 75 to 85 pounds. Everything about Mals suggests their origin as an arctic sled dog: The heavy bone, deep chest, powerful shoulders, and dense, weatherproof coat all scream, “I work hard for a living!” But their almond-shaped brown eyes have an affectionate sparkle, suggesting Mals enjoy snuggling with their humans when the workday is done. Mals are pack animals. And in your family “pack,” the leader must be you. If a Mal doesn’t respect you, he will wind up owning you instead of the other way around. Firm but loving training should begin in early puppyhood. That said, a well-behaved Mal is a joy to be with—playful, gentle, friendly, and great with kids.";
+                    }
+                    return false;
+                }
+        </script>
+        <div id="result" class="card mb-3" style="max-width: 950px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img id = "dogImage"src="..." class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="title">The best match dog: </h3>
+        <h4 id="dogName"></h4>
+        <p id= "dogDesc"class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
 
     
     
