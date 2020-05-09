@@ -13,7 +13,7 @@ var dogSchema = new mongoose.Schema({
 	dog_size:String,
 	dog_gender:String,
 	comments:[{
-		type:mongoose.Schema.Type.ObjectID,
+		type:mongoose.Schema.Types.ObjectID,
 		ref:"Comment"
 	}]
 });
