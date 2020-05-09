@@ -1,9 +1,10 @@
-var express    = require("express");
-var login = require('./routes/loginroutes');
-var bodyParser = require('body-parser');
-var app = express();
-
-var router = express.Router();
+const express = require("express");
+const { check, validationResult} = require("express-validator/check");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const router = express.Router();
+const auth = require("./../middleware/auth");
+const User = require("../model/User");
 // test route
 async function isAuth(req){
     try{
@@ -159,7 +160,4 @@ router.get("/logout", async(req,res) =>
       res.send({ message: "Error in Fetching user" });
     }
   });
-router.post('/Users_register',login.register);
-router.post('/Users_login',login.login)
-app.use('/api', router);
-app.listen(3000);
+module.exports = router;
