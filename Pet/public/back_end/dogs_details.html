@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>BHOW-BHOW Dogs Details</title>
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/css/datepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-timepicker/compiled/timepicker.css" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-datetimepicker/datertimepicker.css" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="index.html" class="logo"><b>Bhow<span>Bhow</span></b></a>
+      <!--logo end-->
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="login.html">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+     <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="index.html"><img src="img/stevens.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Admin</h5>
+          <li class="mt">
+            <a href="index.html">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              </a>
+          </li>
+
+          <li class="sub-menu">
+            <a class="active" href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>Data Tables</span>
+              </a>
+            <ul class="sub">
+              <li><a href="users_table.html">Users Table</a></li>
+              <li><a href="advertisers_table.html">Advertisers Table</a></li>
+              <li class="active"><a href="dogs_table.html">Dogs Table</a></li>
+              <li><a href="comments_table.html">Comments Table</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="inbox.html">
+              <i class="fa fa-envelope"></i>
+              <span>Mail </span>
+              <span class="label label-theme pull-right mail-info">6</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="charts.html">
+              <i class=" fa fa-bar-chart-o"></i>
+              <span>Charts</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-comments-o"></i>
+              <span>Chat Room</span>
+              </a>
+            <ul class="sub">
+              <li><a href="lobby.html">Lobby</a></li>
+              <li><a href="chat_room.html"> Chat Room</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+          <div class="col-lg-12">
+            <div class="row content-panel">
+              <div class="col-md-4 profile-text mt mb centered">
+               
+              </div>
+              <!-- /col-md-4 -->
+              <div class="col-md-4 profile-text">
+                <h3><a href="users_table.html"> Dogs Table</a></h3>
+                
+              </div>
+              
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+              <div class="panel-heading">
+                <ul class="nav nav-tabs nav-justified">
+                  <li>
+                    <a data-toggle="tab" href="#details">Details</a>
+                  </li>
+                  <li class="active">
+                    <a data-toggle="tab" href="#edit" >Edit</a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#add">Add new</a>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- /panel-heading -->
+              <div class="panel-body">
+                <div class="tab-content">
+                  
+                  <div id="details" class="tab-pane">
+                    <div class="row">
+                      <div class="col-md-6 detailed">
+                        <h4>Dog Details</h4>
+                        
+              			
+                        <div class="col-md-8 col-md-offset-2 mt">
+                          <p>
+                            <strong>Dog Picture:</strong>
+                            
+                			<div class="profile-pic">
+                  				<p><img src="img/akita-detail.jpg" class="img-circle"></p>
+                			</div>
+              			
+                          </p>
+                        
+                          <p>
+                            <strong>Dog ID:</strong>7b7997a2-c0d2-4f8c-b27a-6a1d4b5b6310
+                          </p>
+                          <p>
+                          	<strong>Dog Name: </strong>Lokey
+                          </p>
+                          <p>
+                          	<strong>Dog Breed: </strong>Dobermann
+                          </p>
+                          <p>
+                          	<strong>Dog Age: </strong>2 months
+                          </p>
+                          <p>
+                          	<strong>Dog address: </strong>8th Washington street Hoboken, NJ
+                          </p>
+                          <p>
+                          	<strong>Dog Vaccine: </strong>“rabies”, “distemper”, “parvo”
+                          </p>
+                          <p>
+                          	<strong>Dog Postdate:</strong>2020-03-20
+                          </p>
+                          <p>
+                          	<strong>Dog color: </strong>Brown
+                          </p>
+                          <p>
+                          	<strong>Dog Size: </strong>(when grown) Med. 26-60 lbs (12-27 kg)
+                          </p>
+                          <p>
+                          	<strong>Dog Gender: </strong>Male
+                          </p>
+                          <p>
+                          	<strong>Dog Description: </strong>He’s very active and affectionate . He loves a lot of attention and will let you know by cuddling up to you. I prefer a loving single or couple who has time to give him the attention he needs and deserves.
+                          </p>
+                          <br>
+                          
+                        </div>
+                      </div>
+                      <!-- /col-md-6 -->
+                      <div class="col-md-6 detailed">
+                        
+                        <h4>Dog Comments</h4>
+                        <div class="col-md-8 col-md-offset-2 mt">
+                          <p>
+                            9c7997a2-c0d2-4f8c-b27a-6a1d4b5b6321
+                          </p>
+                          <p>
+                            9c7997a2-c0d2-4f8c-b27a-6a1d4b5b6346
+                          </p>
+                          <br>
+                          
+                        </div>
+                      </div>
+                      <!-- /col-md-6 -->
+                    </div>
+                    <!-- /row -->
+                  </div>
+                  
+                  <!-- /tab-pane -->
+                  
+                  
+                  <div id="edit" class="tab-pane active">
+                    <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 detailed mt">
+                        <h4 class="mb">Basic Information</h4>
+                        <form role="form" class="form-horizontal">                    
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Picture</label>
+                            <div class="profile-pic">
+                  				<p><img src="img/akita-detail.jpg" class="img-circle"></p>
+                			</div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Name</label>
+                            <div class="col-lg-6">
+                              <p>Lokey</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Breed</label>
+                            <div class="col-lg-6">
+                              <p>Dobermann</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Age</label>
+                            <div class="col-lg-6">
+                              <p>2 months</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Address</label>
+                            <div class="col-lg-6">
+                              <p>8th Washington street Hoboken, NJ</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Vaccine</label>
+                            <div class="col-lg-6">
+                              <p>“rabies”, “distemper”, “parvo”</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Post Date</label>
+                            <div class="col-lg-6">
+                              <p>2020-03-20</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Color</label>
+                            <div class="col-lg-6">
+                              <p>Brown</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Gender</label>
+                            <div class="col-lg-6">
+                              <p>Male</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Size</label>
+                            <div class="col-lg-6">
+                              <p>(when grown) Med. 26-60 lbs (12-27 kg)</p>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Description</label>
+                            <div class="col-lg-6">
+                              <p>He’s very active and affectionate . He loves a lot of attention and will let you know by cuddling up to you. I prefer a loving single or couple who has time to give him the attention he needs and deserves.</p>
+                            </div>
+                          </div>
+                         
+                          
+                          
+                          
+                        </form>
+                      </div>
+                    
+                      <div class="col-lg-8 col-lg-offset-2 detailed">
+                        <h4 class="mb">Update Information</h4>
+                        <form role="form" class="form-horizontal">
+                         
+                         
+                         <div class="form-group">
+                  			
+                  			<label class="col-lg-2 control-label">Image Upload</label>
+                 			 <div class="col-md-9">
+                    			<div class="fileupload fileupload-new" data-provides="fileupload">
+                      			<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                        			<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" alt="" />
+                      			</div>
+                      			<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                      			<div>
+                        			<span class="btn btn-theme02 btn-file">
+                          			<span class="fileupload-new"><i class="fa fa-paperclip"></i> Select image</span>
+                        			<span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                        			<input type="file" class="default" />
+                        			</span>
+                        			<a href="dogs_details.html" class="btn btn-theme04 fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash-o"></i> Remove</a>
+                      			</div>
+                    			</div>
+                    			<span class="label label-info">NOTE!</span>
+                    			<span>
+                      				Attached image thumbnail is
+                      				supported in Latest Firefox, Chrome, Opera,
+                      				Safari and Internet Explorer 10 only
+                      			</span>
+                  			</div>
+                		</div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" placeholder="dog name" id="c-name" class="form-control">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Breed</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Akita</option>
+                  				<option>Alaskan Malamute</option>
+                  				<option>Beagle</option>
+                  				<option>Boxer</option>
+                  				<option>Cattle Dog</option>
+                  				<option>Chihuahua</option>
+                  				<option>Doberman Pinscher</option>
+                  				<option>Dalamatian</option>
+                  				<option>English Bulldog</option>
+                  				<option>Feist</option>
+                  				<option>Fox Terrier</option>
+                  				<option>German Shepherd Dog</option>
+                  				<option>Great Pyrenees</option>
+                  				<option>Husky</option>
+                  				<option>Hound</option>
+                  				<option>Italian Greyhound</option>
+                  				<option>Jindo</option>
+                  				<option>Labrador Retriever</option>
+                  				<option>Maltese</option>
+                  				<option>Pointer</option>
+                  				<option>Retriever</option>
+                  				<option>Saluki</option>
+                  				<option>Terrier</option>
+                  				<option>Vizsla</option>
+                  				<option>Weimaraner</option>
+                  				<option>Yorkshire Terrier</option>
+                  				
+                  				
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Age</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Puupy</option>
+                  				<option>Young</option>
+                  				<option>Adult</option>
+                  				<option>Senior</option>
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Address</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Newark, NJ</option>
+                  				<option>Jersey City, NJ</option>
+                  				<option>Paterson, NJ</option>
+                  				<option>Elizabeth, NJ</option>
+                  				<option>Edison, NJ</option>
+                  				<option>Woodbridge Township, NJ</option>
+                  				<option>Lakewood Township, NJ</option>
+                  				<option>Trenton, NJ</option>
+                  				<option>Clifton, NJ</option>
+                  				<option>Camden, NJ</option>
+                  				<option>Cherry Hill, NJ</option>
+                  				<option>Hoboken, NJ</option>
+                  				<option>Irvington, NJ</option>
+                  				<option>Wayne, NJ</option>
+                  				<option>New Brunswick, NJ</option>
+                  				<option>Piscataway, NJ</option>
+                  				<option>Vineland, NJ</option>
+                  				<option>Bayonne, NJ</option>
+                  				<option>Franklin Township, NJ</option>
+                  				<option>Passaic, NJ</option>
+                  				<option>Union City, NJ</option>
+                  				<option>East Orange, NJ</option>
+                  				<option>North Bergen, NJ</option>
+                  				<option>Plainfield, NJ</option>
+                  				<option>Lakewood Township, NJ</option>
+                  				<option>Toms River, NJ</option>
+                  				<option>Hamilton Township, NJ</option>
+                  				<option>Brick Township, NJ</option>
+                  				
+                  				
+                  				
+                  				
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Vaccine</label>
+                            <div class="col-lg-6">
+                              <input type="text" placeholder="dog vaccine" id="" class="form-control">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Postdate</label>
+                            <div class="col-lg-6">
+                              <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Gender</label>
+                            <div class="col-lg-6">
+                            
+                            <select class="form-control">
+                  				<option>Male</option>
+                  				<option>Female</option>
+                			</select>
+                			
+                            </div>
+                          </div>
+   
+
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Size</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Small (0-25 lbs)</option>
+                  				<option>Medium (26-60 lbs)</option>
+                  				<option>Large (60-100 lbs)</option>
+                  				<option>Extra Large (101 lbs or more)</option>
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Color</label>
+                            <div class="col-lg-6">
+                              <input type="text" placeholder="dog color" id="" class="form-control">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Description</label>
+                            <div class="col-lg-6">
+                              <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                            </div>
+                          </div>
+                          
+                         
+                          
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button class="btn btn-theme" type="submit">Save</button>
+                            </div>
+                          </div>
+                         
+                        </form>
+                      </div>
+                      
+                      <!-- /col-lg-8 -->
+                    </div>
+                    <!-- /row -->
+                  </div>
+                  <!-- /tab-pane -->
+                  <div id="add" class="tab-pane">
+                    <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2 detailed">
+                        <h4 class="mb">Add new advertiser</h4>
+                        <form role="form" class="form-horizontal">
+                         
+                         
+                         <div class="form-group">
+                  			
+                  			<label class="col-lg-2 control-label">Image Upload</label>
+                 			 <div class="col-md-9">
+                    			<div class="fileupload fileupload-new" data-provides="fileupload">
+                      			<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                        			<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" alt="" />
+                      			</div>
+                      			<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                      			<div>
+                        			<span class="btn btn-theme02 btn-file">
+                          			<span class="fileupload-new"><i class="fa fa-paperclip"></i> Select image</span>
+                        			<span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                        			<input type="file" class="default" />
+                        			</span>
+                        			<a href="dogs_details.html" class="btn btn-theme04 fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash-o"></i> Remove</a>
+                      			</div>
+                    			</div>
+                    			<span class="label label-info">NOTE!</span>
+                    			<span>
+                      				Attached image thumbnail is
+                      				supported in Latest Firefox, Chrome, Opera,
+                      				Safari and Internet Explorer 10 only
+                      			</span>
+                  			</div>
+                		</div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" placeholder="dog name" id="c-name" class="form-control">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Breed</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Akita</option>
+                  				<option>Alaskan Malamute</option>
+                  				<option>Beagle</option>
+                  				<option>Boxer</option>
+                  				<option>Cattle Dog</option>
+                  				<option>Chihuahua</option>
+                  				<option>Doberman Pinscher</option>
+                  				<option>Dalamatian</option>
+                  				<option>English Bulldog</option>
+                  				<option>Feist</option>
+                  				<option>Fox Terrier</option>
+                  				<option>German Shepherd Dog</option>
+                  				<option>Great Pyrenees</option>
+                  				<option>Husky</option>
+                  				<option>Hound</option>
+                  				<option>Italian Greyhound</option>
+                  				<option>Jindo</option>
+                  				<option>Labrador Retriever</option>
+                  				<option>Maltese</option>
+                  				<option>Pointer</option>
+                  				<option>Retriever</option>
+                  				<option>Saluki</option>
+                  				<option>Terrier</option>
+                  				<option>Vizsla</option>
+                  				<option>Weimaraner</option>
+                  				<option>Yorkshire Terrier</option>
+                  				
+                  				
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Age</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Puupy</option>
+                  				<option>Young</option>
+                  				<option>Adult</option>
+                  				<option>Senior</option>
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Address</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Newark, NJ</option>
+                  				<option>Jersey City, NJ</option>
+                  				<option>Paterson, NJ</option>
+                  				<option>Elizabeth, NJ</option>
+                  				<option>Edison, NJ</option>
+                  				<option>Woodbridge Township, NJ</option>
+                  				<option>Lakewood Township, NJ</option>
+                  				<option>Trenton, NJ</option>
+                  				<option>Clifton, NJ</option>
+                  				<option>Camden, NJ</option>
+                  				<option>Cherry Hill, NJ</option>
+                  				<option>Hoboken, NJ</option>
+                  				<option>Irvington, NJ</option>
+                  				<option>Wayne, NJ</option>
+                  				<option>New Brunswick, NJ</option>
+                  				<option>Piscataway, NJ</option>
+                  				<option>Vineland, NJ</option>
+                  				<option>Bayonne, NJ</option>
+                  				<option>Franklin Township, NJ</option>
+                  				<option>Passaic, NJ</option>
+                  				<option>Union City, NJ</option>
+                  				<option>East Orange, NJ</option>
+                  				<option>North Bergen, NJ</option>
+                  				<option>Plainfield, NJ</option>
+                  				<option>Lakewood Township, NJ</option>
+                  				<option>Toms River, NJ</option>
+                  				<option>Hamilton Township, NJ</option>
+                  				<option>Brick Township, NJ</option>
+                  				
+                  				
+                  				
+                  				
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Vaccine</label>
+                            <div class="col-lg-6">
+                              <input type="text" placeholder="dog vaccine" id="" class="form-control">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Postdate</label>
+                            <div class="col-lg-6">
+                              <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Gender</label>
+                            <div class="col-lg-6">
+                            
+                            <select class="form-control">
+                  				<option>Male</option>
+                  				<option>Female</option>
+                			</select>
+                			
+                            </div>
+                          </div>
+   
+
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Size</label>
+                            <div class="col-lg-6">
+                              <select class="form-control">
+                  				<option>Small (0-25 lbs)</option>
+                  				<option>Medium (26-60 lbs)</option>
+                  				<option>Large (60-100 lbs)</option>
+                  				<option>Extra Large (101 lbs or more)</option>
+                			</select>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Dog Color</label>
+                            <div class="col-lg-6">
+                              <input type="text" placeholder="dog color" id="" class="form-control">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Description</label>
+                            <div class="col-lg-6">
+                              <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                            </div>
+                          </div>
+                          
+                         
+                          
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button class="btn btn-theme" type="submit">Save</button>
+                            </div>
+                          </div>
+                         
+                        </form>
+                        
+                      </div>
+                    </div>
+                    <!-- /row -->
+                  </div>
+                  <!-- /tab-pane -->
+                </div>
+                <!-- /tab-content -->
+              </div>
+              <!-- /panel-body -->
+            </div>
+            <!-- /col-lg-12 -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          &copy; 2020 <strong>BHOW-BHOW</strong>
+        </p>
+        <div class="credits">
+          <a href="https://www.stevens.edu/academics/" target="_blank" title="stevens">Stevens Institute Of Technology</a>
+        </div>
+        <a href="index.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+          </a>
+      </div>
+    </footer>
+    <!--footer end-->
+    
+    
+    
+    
+    
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="lib/jquery.scrollTo.min.js"></script>
+  <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--common script for all pages-->
+  <script src="lib/common-scripts.js"></script>
+  <script type="text/javascript" src="lib/jquery.idealforms.js"></script>
+
+  <!--script for this page-->
+  <script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+  <script src="lib/advanced-form-components.js"></script>
+</body>
+
+</html>
