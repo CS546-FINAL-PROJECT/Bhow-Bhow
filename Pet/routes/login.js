@@ -151,6 +151,14 @@ router.get("/logout", async(req,res) =>
     res.render("User_login", {title:"You have been logged out"});
 });
 
+ router.get("/me", auth, async (req, res) => {
+    try {
+       const user = await User.findById(req.user.id);
+      res.json(user);
+    } catch (e) {
+      res.send({ message: "Error in Fetching user" });
+    }
+  });
 router.post('/Users_register',login.register);
 router.post('/Users_login',login.login)
 app.use('/api', router);
