@@ -45,7 +45,10 @@ router.post("/register", async (req, res) => {
         const {
             username,
             email,
-            password
+            password,
+            gender,
+            address,
+            age
         } = req.body;
         try {
             let user = await User.findOne({
@@ -60,7 +63,10 @@ router.post("/register", async (req, res) => {
             user = new User({
                 username,
                 email,
-                password
+                password,
+                gender,
+                address,
+                age
             });
 
             const salt = await bcrypt.genSalt(10);
@@ -73,6 +79,7 @@ router.post("/register", async (req, res) => {
                     id: user.id
                 }
             };
+
             jwt.sign(
                 payload,
                 "randomString", {
@@ -103,9 +110,7 @@ router.post("/login", async (req, res) => {
   
       const { email, password } = req.body;
       try {
-        let user = await User.findOne({
-          email
-        });
+        let user = await User.findOne({email});
         if (!user)
           return res.status(400).json({
             message: "User Not Exist"
@@ -117,25 +122,18 @@ router.post("/login", async (req, res) => {
             message: "Incorrect Password !"
           });
   
-        const payload = {
-          user: {
-            id: user.id
-          }
-        };
+        if(user && isMatch) {
+            let sid=uuid();
+    
+            user.sessionID=sid;
+    
+            res.cookie("AuthCookie", sid);
+            req.session.user = { username:user.username, email: user.email};
+
+            res.redirect("/index");
+        }
   
-        jwt.sign(
-          payload,
-          "secret",
-          {
-            expiresIn: 3600
-          },
-          (err, token) => {
-            if (err) throw err;
-            res.status(200).json({
-              token
-            });
-          }
-        );
+        
       } catch (e) {
         console.error(e);
         res.status(500).json({
