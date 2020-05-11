@@ -29,7 +29,7 @@ var data = [{
 	dog_gender:"Male"
 },{
 	dog_breed:"American Staffordshire Terrier ",
-	dog_name:"Yankee",
+	dog_name:"Stanford",
 	dog_age:"16 monthes",
 	dog_address:"183 Hutton St",
 	dog_description:"Very smart, confident, good-natured companions. Their courage is proverbial",
@@ -39,7 +39,82 @@ var data = [{
 	dog_color:"Yellow",
 	dog_size:"14 ft",
 	dog_gender:"Male"
-}];
+},
+{
+    dog_breed:"Golden Retriever",
+    dog_name:"Sparky",
+    dog_age:"2 years",
+    dog_address:"1 Castle Point terrace",
+    dog_description: "Loyal and playful companion",
+    dog_vaccine:["Parvovirus"],
+    dog_picture: "",
+    dog_postdate: "11-January-2020",
+    dog_color: "Golden",
+    dog_size: "12 ft",
+    dog_gender: "Female"
+},
+{
+    username: "Dogluvr1979",
+    password: "pa$$word",
+    user_email: "Dolores19@gmail.com",
+    user_gender: "Female",
+    user_address: "1277 Hogwarts Place",
+    user_age: "26",
+    favoriteList: ["Sparky", "Yankee"]
+
+},
+{
+    username: "Catssuck301",
+    password: "password123",
+    user_email: "Metsfan192@gmail.com",
+    user_gender: "Male",
+    user_address: "19 Trinity Way",
+    user_age: "52",
+    favoriteList: ["KiKi", "Stanford"]
+
+},
+{
+    username: "Skaterboy1999",
+    password: "PopPunkLyfe",
+    user_email: "MikeyWay@gmail.com",
+    user_gender: "Male",
+    user_address: "14 Parade Street",
+    user_age: "35",
+    favoriteList: ["Stanford", "Yankee"]
+
+},
+{
+        username: "Veterinarian192",
+		advertiser_firstName: "John",
+		advertiser_lastName:"Salazar",
+	    advertiser_email:"DocJohn@gmail.com",
+		advertiser_userPassword:"Vet1999!",
+		advertiser_cellphone:"732-288-2819",
+		advertiser_address:" 1 Wizardly Way",
+        advertiser_dogList:["Yankee", "Stanford"]
+},
+{
+        username: "Pet_foodislyfe",
+		advertiser_firstName: "Sarah",
+		advertiser_lastName:"Connor",
+	    advertiser_email:"terminator@gmail.com",
+		advertiser_userPassword:"EliminateHumanz",
+		advertiser_cellphone:"732-199-7927",
+		advertiser_address:" 1991 Myrtle Lane",
+        advertiser_dogList:["Sparky"]
+},
+{
+        username: "ObedienceMastah",
+		advertiser_firstName: "George",
+		advertiser_lastName:"Martin",
+	    advertiser_email:"Tolkeinluvr@gmail.com",
+		advertiser_userPassword:"IceKing192",
+		advertiser_cellphone:"201-999-1629",
+		advertiser_address:" 12 Felicity Street",
+        advertiser_dogList:["Stanford"]
+
+}
+];
 
 function seedDB(){
     Dog.remove({},function(err){
