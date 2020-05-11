@@ -1,0 +1,8 @@
+[0509/234542.432:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 1e6d558a-41cf-4f43-bdf9-a0b66ba69aa7
+[0509/234545.128:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 1e6d558a-41cf-4f43-bdf9-a0b66ba69aa7
+[0509/234548.432:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 1e6d558a-41cf-4f43-bdf9-a0b66ba69aa7
+[0511/002139.660:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: The paging file is too small for this operation to complete. (0x800705AF)
+[0511/002139.661:ERROR:minidumpwritedump_with_crashpad_info.cc(562)] Failed to write minidump file
+[0511/002139.661:ERROR:crash_report_exception_handler.cc(128)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0511/002139.667:ERROR:process_info.cc(359)] UncheckedAllocate
+[0511/002140.492:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value 1e6d558a-41cf-4f43-bdf9-a0b66ba69aa7
