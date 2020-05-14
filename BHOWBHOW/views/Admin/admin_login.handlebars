@@ -1,0 +1,108 @@
+
+    <div id="all">
+      <!-- Top bar-->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6 d-md-block d-none">
+              <p>BHOW BHOW DOG ADOPTION</p>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex justify-content-md-end justify-content-between">
+                <ul class="list-inline contact-info d-block d-md-none">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+               
+                
+				<!-- Log Out & Admin -->
+                <div class="login">                 
+                 <a href="/BhowBhow" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">Home</span></a> 
+                </div>
+
+                <ul class="social-custom list-inline">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top bar end-->
+      
+      <!-- Navbar Start-->
+      <header class="nav-holder make-sticky">
+        <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+          <div class="container"><a href="/BhowBhow" class="navbar-brand home"><img src="../img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="../img/logo.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">BHOWBHOW - go to homepage</span></a>
+            
+            
+          </div>
+        </div>
+      </header>
+      <!-- Navbar End-->
+      
+      
+      <div id="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="box">
+                <h2 class="text-uppercase">Admin LogIn</h2>
+
+                <hr>
+                <form action="/BhowBhowAdmin/login" method="POST">
+                  <div class="form-group">
+                    <label for="email-login">Email</label>
+                    <input id="email-login" name="email"type="email" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="password-login">Password</label>
+                    <input id="password-login" name="password"type="password" class="form-control">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Log in</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <br><br><br><br><br><br><br>
+      </div>
+     {{error}}
+      <!-- FOOTER -->
+      <footer class="main-footer">
+        
+        <div class="copyrights">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 text-center-md">
+                <p>&copy; 2020. BHOW-BHOW</p>
+              </div>
+              <div class="col-lg-8 text-right text-center-md">
+                <p> <a href="https://www.stevens.edu/academics/" target="_blank" title="stevens">Stevens Institute Of Technology</a></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <!-- Javascript files-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="../vendor/waypoints/lib/jquery.waypoints.min.js"> </script>
+    <script src="../vendor/jquery.counterup/jquery.counterup.min.js"> </script>
+    <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="../vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    <script src="../js/jquery.parallax-1.1.3.js"></script>
+    <script src="../vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="../vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>
+    <script src="../js/front.js"></script>

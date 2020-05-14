@@ -1,0 +1,61 @@
+body {
+  color: #686868;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding-top: 55px;
+  overflow-x: hidden;
+}
+#cover {
+  width : 1000px;
+  height: 350px;
+}
+.question {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #39999a;
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
+.bi-house-door {
+  margin: 0.9em;
+  color: rgb(231, 14, 14);
+}
+.header {
+    display: inline-block;
+    /* width:1200px; */
+    /* height: 100px; */
+    margin: 0.75em;
+    color: darkorange;
+}
+
+
+.container {
+    max-width: 1200px;
+}
+.radio_keys {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  height: auto;
+  text-transform: capitalize;
+  font-size: 1.3em;
+}
+
+.btn-primary {
+  background-color: #1b6599;
+  border-color: #1b6599;
+  padding: 14px 44px;
+}
+
+#submit_button {
+  /* margin-bottom: 70px; */
+  text-align: center;
+  /* font-size: 1.2em;/ */
+  padding: 40px;
+}
