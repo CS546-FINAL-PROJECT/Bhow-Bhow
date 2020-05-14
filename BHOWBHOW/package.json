@@ -1,0 +1,26 @@
+{
+  "name": "cs546_project",
+  "version": "1.0.0",
+  "description": "This is made for the cs546 project.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "seed": "node ./tasks/seed.js"
+  },
+  "author": "Yuting Shao",
+  "license": "MIT",
+  "dependencies": {
+    "@khanacademy/tota11y": "^0.2.0",
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "mongodb": "^3.5.7",
+    "xss": "^1.0.6"
+  }
+}
